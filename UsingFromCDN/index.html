@@ -9,11 +9,14 @@
   </head>
   <body>
     <div id="app">
-      <h2>The user is {{firstName}} {{lastName}} - age: {{age}}</h2>
+      <h2>The user is {{firstName}} {{lastName}} - lucky number: {{age}}</h2>
       <button v-on:click="increaseNumber">INCREASE</button>
       <button @click="age--">DECREASE</button
       ><!--  shorthand -->
-      <div v-if="isOlder">You are getting older!!!</div>
+      <section>
+        <div v-if="isOlder">Number bigger than 35!!!</div>
+        <div v-else>Number is smaller than 35</div>
+      </section>
     </div>
     <script src="app.js"></script>
   </body>
