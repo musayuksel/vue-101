@@ -2,7 +2,7 @@ const app = Vue.createApp({
   //data and functions
   //   template: ' <h2>TEMPLATE</h2>',
   data: () => {
-    return { title: 'Hello' };
+    return { firstName: 'Musa', lastName: 'Yuxel' };
   },
 });
 app.mount('#app');
