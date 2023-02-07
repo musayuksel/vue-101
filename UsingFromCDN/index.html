@@ -17,6 +17,9 @@
         <div v-if="isOlder">Number bigger than 35!!!</div>
         <div v-else>Number is smaller than 35</div>
       </section>
+      <div v-show="!isOlder">
+        This div will be in the DOM always!!! vue is going to add display:none
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
