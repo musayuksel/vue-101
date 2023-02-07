@@ -9,7 +9,10 @@
   </head>
   <body>
     <div id="app">
-      <h2>The user is {{firstName}} {{lastName}}</h2>
+      <h2>The user is {{firstName}} {{lastName}} - age: {{age}}</h2>
+      <button v-on:click="increaseNumber">INCREASE</button>
+      <button @click="age--">DECREASE</button
+      ><!--  shorthand -->
     </div>
     <script src="app.js"></script>
   </body>
