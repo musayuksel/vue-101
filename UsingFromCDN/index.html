@@ -33,7 +33,7 @@
       </div>
       <br />
       <section class="mouseEvent">
-        <h2>{{mouseEventHeader}}</h2>
+        <h2 :class="{myDynamicClass: isOlder}">{{mouseEventHeader}}</h2>
         <div class="box" @mouseover="handleEvent">{{box1Text}}</div>
         <div class="box" @mouseleave="handleEvent">{{box2Text}}</div>
         <div class="box" @dblclick="handleEvent">{{box3Text}}</div>
