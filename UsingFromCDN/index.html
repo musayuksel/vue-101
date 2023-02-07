@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      .box {
+        border: 1px solid red;
+        padding: 2rem;
+      }
+      .mouseEvent {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
@@ -20,6 +31,14 @@
       <div v-show="!isOlder">
         This div will be in the DOM always!!! vue is going to add display:none
       </div>
+      <br />
+      <section class="mouseEvent">
+        <h2>{{mouseEventHeader}}</h2>
+        <div class="box" @mouseover="handleEvent">{{box1Text}}</div>
+        <div class="box" @mouseleave="handleEvent">{{box2Text}}</div>
+        <div class="box" @dblclick="handleEvent">{{box3Text}}</div>
+        <div class="box" @mousemove="handleMouseMove"></div>
+      </section>
     </div>
     <script src="app.js"></script>
   </body>

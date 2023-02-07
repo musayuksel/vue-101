@@ -7,12 +7,22 @@ const app = Vue.createApp({
       lastName: 'Yuxel',
       age: 33,
       isOlder: false,
+      box1Text: 'Mouse over',
+      box2Text: 'Mouse leave',
+      box3Text: 'Double Click ',
+      mouseEventHeader: 'There is no event',
     };
   },
   methods: {
     increaseNumber() {
       this.age++;
       this.isOlder = this.age > 35;
+    },
+    handleEvent(event) {
+      this.mouseEventHeader = event.type;
+    },
+    handleMouseMove(event) {
+      this.mouseEventHeader = `Mouse X position is: ${event.offsetX}`;
     },
   },
 });
