@@ -18,6 +18,10 @@ const app = Vue.createApp({
       this.age++;
       this.isOlder = this.age > 35;
     },
+    decreaseNumber() {
+      this.age--;
+      this.isOlder <= 35;
+    },
     handleEvent(event) {
       this.mouseEventHeader = event.type;
     },

@@ -24,9 +24,15 @@
   <body>
     <div id="app">
       <h2>The user is {{firstName}} {{lastName}} - lucky number: {{age}}</h2>
-      <button v-on:click="increaseNumber">INCREASE</button>
-      <button @click="age--">DECREASE</button
+      <button @click="decreaseNumber">DECREASE</button
       ><!--  shorthand -->
+      <button
+        v-on:click="increaseNumber"
+        class="static_class"
+        :class="{myDynamicClass: isOlder}"
+      >
+        INCREASE
+      </button>
       <section>
         <div v-if="isOlder">Number bigger than 35!!!</div>
         <div v-else>Number is smaller than 35</div>
