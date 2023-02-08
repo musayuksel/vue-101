@@ -48,6 +48,13 @@
         <div class="box" @dblclick="handleEvent">{{box3Text}}</div>
         <div class="box" @mousemove="handleMouseMove">Mouse move</div>
       </section>
+      <button
+        @click="handleToggle"
+        class="staticClass"
+        :class="{specialClass:isToggled}"
+      >
+        TOGGLE ME
+      </button>
     </div>
     <script src="app.js"></script>
   </body>

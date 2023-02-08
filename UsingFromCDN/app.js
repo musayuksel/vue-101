@@ -11,6 +11,7 @@ const app = Vue.createApp({
       box2Text: 'Mouse leave',
       box3Text: 'Double Click ',
       mouseEventHeader: 'There is no event',
+      isToggled: false,
     };
   },
   methods: {
@@ -27,6 +28,9 @@ const app = Vue.createApp({
     },
     handleMouseMove(event) {
       this.mouseEventHeader = `Mouse X position is: ${event.offsetX}`;
+    },
+    handleToggle() {
+      this.isToggled = !this.isToggled;
     },
   },
 });
