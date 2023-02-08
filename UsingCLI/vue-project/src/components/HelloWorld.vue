@@ -1,15 +1,22 @@
 <script setup>
+  import { ref } from 'vue'
 defineProps({
   msg: {
     type: String,
     required: true
   }
 })
+const nameInput = ref('')
+function handleConsoleName(){
+  console.log(">>>>", nameInput.value)
+}
 </script>
 
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
+    <input type="text" placeholder="Name" v-model="nameInput" />
+    <button @click='handleConsoleName'>Console Name</button>
   </div>
 </template>
 
@@ -28,3 +35,4 @@ h1 {
 @media (min-width: 1024px) {
 }
 </style>
+
