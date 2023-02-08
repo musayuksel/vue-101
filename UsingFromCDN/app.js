@@ -12,6 +12,11 @@ const app = Vue.createApp({
       box3Text: 'Double Click ',
       mouseEventHeader: 'There is no event',
       isToggled: false,
+      people: [
+        { name: 'musa', isPD: true },
+        { name: 'Alex', isPD: false },
+        { name: 'Joe', isPD: true },
+      ],
     };
   },
   methods: {
@@ -31,6 +36,11 @@ const app = Vue.createApp({
     },
     handleToggle() {
       this.isToggled = !this.isToggled;
+    },
+  },
+  computed: {
+    productDevs() {
+      return this.people.filter((person) => person.isPD);
     },
   },
 });
